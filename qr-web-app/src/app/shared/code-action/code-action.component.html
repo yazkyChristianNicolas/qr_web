@@ -1,0 +1,7 @@
+
+<div id="action-container">
+    <div id="action-icon-container"  [ngClass]="{'icon-dimensions': showName, 'icon-dimensions-no-name': !showName}">
+       <mat-icon aria-hidden="false" [ngClass]="{'icon-top30': showName, 'icon-top20': !showName}">{{action.icon}}</mat-icon>
+    </div>
+    <p id="action-name" *ngIf="showName" [style.font-size]="fontSize">{{action.name}}</p>
+</div>

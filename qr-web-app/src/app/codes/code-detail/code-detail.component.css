@@ -1,0 +1,41 @@
+.code-detail{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 4px;
+    color: white;
+    width: auto;
+    height: auto;
+}
+
+.container .row{
+    height: 40%;
+}
+
+.align-items-start{
+    height: 20% !important;
+}
+
+.container > .row  > .col {
+    height: 100%;
+    display: contents;
+}
+
+.codeNameTitle{
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    color: white;
+}
+
+#qr{
+    height: 100%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}

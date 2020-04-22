@@ -1,0 +1,79 @@
+<div class="container full-height-container">
+    <div class="row">
+        <div class="col-8 customCard" id="formContainer">
+            <h1>Nuevo Código</h1>
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="full-width-input">
+                  <mat-label>Nombre</mat-label>
+                  <input type="text" matInput  placeholder="Ej. Mesa 24" [(ngModel)]="currentCode.name">
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field class="full-width-input">
+                  <mat-label>Plantilla</mat-label>
+                  <mat-select [(ngModel)]="blueprint">
+                    <mat-option value="ninguna"> Ninguna</mat-option>
+                    <mat-option value="nueva"> Nueva</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field class="full-width-input" *ngIf="blueprint == 'nueva'">
+                  <mat-label>Nombre Plantilla</mat-label>
+                  <input type="text" matInput>
+                </mat-form-field>
+              </div>
+            </div>
+            <!-- New Action Container -->
+            <h3>Acciones</h3>
+                <div class="row">
+                  <div class="col-4">
+                    <mat-form-field class="full-width-input">
+                      <mat-label>Nombre Accion</mat-label>
+                      <input matInput type="text" [(ngModel)]="currentAction.name">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-3">
+                    <mat-form-field class="full-width-input">
+                      <mat-label>Tipo</mat-label>
+                      <mat-select [(ngModel)]="currentAction.type">
+                        <mat-option value="action" > Acción </mat-option>
+                        <mat-option value="url"> Url </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-3" *ngIf="currentAction.type == 'url'">
+                    <mat-form-field class="full-width-input">
+                      <mat-label>Url</mat-label>
+                      <input matInput type="text">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-3" *ngIf="currentAction.type == 'action'">
+                    <mat-form-field class="full-width-input">
+                      <mat-label>Notificaciones</mat-label>
+                      <mat-select multiple>
+                        <mat-optgroup label="Grupos">
+                          <mat-option value="grupo1">Grupo 1</mat-option>
+                          <mat-option value="grupo2">Grupo 2</mat-option>
+                        </mat-optgroup>
+                        <mat-optgroup label="Usuario">
+                          <mat-option value="usuario1">Usuario 1</mat-option>
+                          <mat-option value="usuario2">Usuario 2</mat-option>
+                        </mat-optgroup>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <div class="col">
+                    <button mat-raised-button class="secondButton" (click)="addAction()">{{actionButtonLengend}}</button>
+                 </div>
+                </div>
+
+
+
+        </div>
+        <div class="col-4">
+            <code-detail [code]="currentCode" [width]="'100%'" [height]="'100%'"> </code-detail>
+        </div>
+      </div>
+</div>

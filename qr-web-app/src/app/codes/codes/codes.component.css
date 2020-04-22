@@ -1,0 +1,23 @@
+.main-container .mat-card-title{
+    padding: 10px 0px 10px 0px;
+}
+
+.customFooter{
+    vertical-align: bottom;
+}
+
+.actionsTable{
+    float: right;
+}
+
+.actionsTable button{
+    position: relative;
+    bottom: 10px;
+    background-color: #10cfb0;
+    color: white
+}
+
+.actionsTable mat-icon{
+    vertical-align: baseline;
+    margin-right: 5px;
+}

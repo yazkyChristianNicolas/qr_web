@@ -1,0 +1,25 @@
+
+    <!-- 
+    <div class="bottom-container">
+        <div class="actionContainer">
+            <div class="action" *ngFor="let action of code.actions"> <code-action [action]="action" [fontSize]="'12px'"></code-action></div>
+        </div>
+    </div> -->
+
+<div class="container" [ngClass]="{'blueprintBackground': !backgroundUrl}"  [style.width]="width" [style.height]="height">
+  <div class="row align-items-start">
+    <div class="col">
+        <h2 class="codeNameTitle">{{ code.name }}</h2> 
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col">
+        <img id="qr" src="https://img.vixdata.io/pd/webp-large/es/sites/default/files/btg/tech.batanga.com/files/wp-content/uploads/2008/04/img_qr_hello.png">
+    </div>
+  </div>
+  <div class="row align-items-end">
+    <div class="col">
+      
+    </div>
+  </div>
+</div>

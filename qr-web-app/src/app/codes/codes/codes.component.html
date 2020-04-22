@@ -1,0 +1,29 @@
+<mat-card class="main-container">
+    <mat-card-title> Mis Códigos
+        <div class="actionsTable">
+            <button mat-raised-button [routerLink]="['new']"><mat-icon svgIcon="qrcode-plus"></mat-icon> Nuevo Código</button>
+        </div>
+    </mat-card-title>
+    <mat-card-content>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Acción</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let notification of notifications; index as i;">
+                    <th scope="row">{{ i }}</th>
+                    <td>{{ notification.name }}</td>
+                    <td>{{ notification.action }}</td>
+                    <td>{{ notification.date }}</td>
+                    <td>{{ notification.state }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-card-content>
+</mat-card>
